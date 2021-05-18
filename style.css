@@ -1,0 +1,143 @@
+:root {
+  --violet: rgb(65, 42, 107);
+  --yellow: #fadb61;
+  --gray: #f8f8f8;
+  --boxShadow: 0 0 10px 0px rgba(65, 42, 107, 0.7);
+  font-size: 16px;
+}
+/* GLOBAL STYLE */
+html {
+  scroll-behavior: smooth;
+}
+h2 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 600;
+  display: inline-block;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 7px;
+  margin: 30px auto;
+  background-color: var(--yellow);
+}
+h2 + p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* header */
+header .carousel {
+  height: 65vh;
+}
+header .carousel-item,
+header .carousel-inner {
+  height: 100%;
+}
+header .carousel-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+header .carousel-caption h5 {
+  font-size: 6rem;
+}
+header .carousel-caption p {
+  font-size: 1.3rem;
+}
+header .carousel-caption button {
+  font-size: 1.1rem;
+}
+
+/* nav bar */
+nav.navbar {
+  background-color: var(--violet);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* about */
+.team h4,
+.contact h4,
+.about article:last-child h4 {
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+.about article:last-child h4 + p {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+.about article:last-child img {
+  border-radius: 30px;
+  box-shadow: 0 0 20px 0px rgba(65, 42, 107, 0.4);
+}
+
+/* works */
+.team img,
+.works img {
+  border-radius: 20px;
+  box-shadow: var(--boxShadow);
+}
+
+/* cta */
+.cta {
+  background-image: linear-gradient(
+      rgba(65, 42, 107, 0.7),
+      rgba(65, 42, 107, 0.7)
+    ),
+    url(img/slide1.jpg);
+}
+.cta h2 {
+  color: var(--gray);
+  padding: 150px 0;
+}
+.cta h2::after {
+  margin-bottom: 0;
+}
+
+/* team */
+.contact h4,
+.team h4 {
+  padding: 20px 0 0;
+}
+
+/* contact */
+.contact {
+  background-color: var(--gray);
+}
+
+.contact i {
+  color: var(--violet);
+  font-size: 2.5rem;
+}
+.contact article:last-child i {
+  margin-left: 50px;
+}
+.contact article:last-child i:first-child {
+  margin-left: 0px;
+}
+
+/* footer */
+footer {
+  background-color: var(--yellow);
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  header .carousel-caption h5 {
+    font-size: 4rem;
+  }
+  .about img {
+    margin-bottom: 20px;
+  }
+  .team .col-8 {
+    margin: 0 auto;
+  }
+}
